@@ -18,14 +18,19 @@ class App extends React.Component {
     this.getWeather();
   }
 
+  farenheit(temp){
+  let far =  Math.floor(temp)
+  return far
+  }
+
   getWeather = async () => {
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=seattle&appid=${API_key}`)
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=seattle&units=imperial&appid=${API_key}`)
     const response = await api_call.json();
     console.log(response)
 
     this.setState({
       city: response.name,
-      temp: response.main.temp
+      temp: this.farenheit(response.main.temp)
 
     })
   }
