@@ -13,7 +13,7 @@ const Weather = props => {
                     <div className="message-list">
                         <div className="message -left">
                             <div className="nes-balloon from-left">
-                                <p>Hello {props.cityname}</p>
+                                <p>Hello, {props.city}'s weather is {props.temp}</p>
                             </div>
                         </div>
                         <div className="cat-icon">
@@ -22,7 +22,7 @@ const Weather = props => {
                     </div>
                 </div>
                 <div className="nes-container is-rounded">
-                    <p>Weather</p>
+                    <p>{props.description}</p>
                 </div>
             </div>
         </div>
