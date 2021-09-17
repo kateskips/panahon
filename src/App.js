@@ -30,7 +30,8 @@ class App extends React.Component {
 
     this.setState({
       city: response.name,
-      temp: this.farenheit(response.main.temp)
+      temp: this.farenheit(response.main.temp),
+      description: response.weather[0].description
 
     })
   }
@@ -38,7 +39,7 @@ class App extends React.Component {
     return(<Weather 
       city={this.state.city}
       temp={this.state.temp}
-      descroption={this.state.description} />);
+      description={this.state.description} />);
   }
 }
 
