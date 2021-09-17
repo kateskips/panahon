@@ -8,17 +8,23 @@ const API_key = "f74159910fbfeca96450bd09405e3b33"
 class App extends React.Component {
   constructor(){
     super()
-    this.state = {}
+    this.state = {
+      city: undefined,
+    }
     this.getWeather();
   }
 
   getWeather = async () => {
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Austin,us&appid=${API_key}`)
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=seattle&appid=${API_key}`)
     const response = await api_call.json();
     console.log(response)
+
+    this.setState({
+      city: response.name
+    })
   }
   render(){
-    return(<Weather />);
+    return(<Weather city={this.state.city} />);
   }
 }
 
