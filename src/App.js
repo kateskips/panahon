@@ -10,6 +10,10 @@ class App extends React.Component {
     super()
     this.state = {
       city: undefined,
+      main: undefined,
+      temp: null,
+      description: "",
+      error: false
     }
     this.getWeather();
   }
@@ -20,11 +24,16 @@ class App extends React.Component {
     console.log(response)
 
     this.setState({
-      city: response.name
+      city: response.name,
+      temp: response.main.temp
+
     })
   }
   render(){
-    return(<Weather city={this.state.city} />);
+    return(<Weather 
+      city={this.state.city}
+      temp={this.state.temp}
+      descroption={this.state.description} />);
   }
 }
 
