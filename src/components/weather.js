@@ -1,7 +1,7 @@
 import React from 'react';
 import "../App.css";
 
-const Weather = () => {
+const Weather = props => {
     return (
         <div className="wrapper">
             <div className="header-title">
@@ -13,7 +13,7 @@ const Weather = () => {
                     <div className="message-list">
                         <div className="message -left">
                             <div className="nes-balloon from-left">
-                                <p>Hello NES.css</p>
+                                <p>Hello {props.cityname}</p>
                             </div>
                         </div>
                         <div className="cat-icon">
