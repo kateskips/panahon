@@ -3,7 +3,7 @@ import './App.css';
 import Weather from "./components/weather";
 
 //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-//const API_key = "f74159910fbfeca96450bd09405e3b33"
+const API_key = "f74159910fbfeca96450bd09405e3b33"
 
 class App extends React.Component {
   constructor(){
@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   getWeather = async () => {
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={f74159910fbfeca96450bd09405e3b33}`)
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Austin,us&appid=${API_key}`)
     const response = await api_call.json();
     console.log(response)
   }
