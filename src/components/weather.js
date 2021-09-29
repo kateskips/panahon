@@ -1,5 +1,7 @@
 import React from 'react';
+import Form from './form';
 import "../App.css";
+
 
 const Weather = props => {
     return (
@@ -9,6 +11,7 @@ const Weather = props => {
                 <div className="nes-container is-rounded" >
                     <p>8-Bit Weather App</p>
                 </div>
+                <Form />
                 <div className="nes-container is-rounded">
                     <div className="message-list">
                         <div className="message -left">
