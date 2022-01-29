@@ -11,7 +11,7 @@ const Weather = props => {
                 <div className="nes-container is-rounded" >
                     <p>8-Bit Weather App</p>
                 </div>
-                <Form />
+                <Form {...props} />
                 <div className="nes-container is-rounded">
                     <div className="message-list">
                         <div className="message -left">
