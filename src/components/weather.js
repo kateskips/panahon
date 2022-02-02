@@ -1,6 +1,6 @@
 import React from 'react';
-import Form from './form';
 import "../App.css";
+import Form from './form';
 
 
 const Weather = props => {
@@ -11,7 +11,6 @@ const Weather = props => {
                 <div className="nes-container is-rounded" >
                     <p>8-Bit Weather App</p>
                 </div>
-                <Form />
                 <div className="nes-container is-rounded">
                     <div className="message-list">
                         <div className="message -left">
@@ -27,6 +26,7 @@ const Weather = props => {
                 <div className="nes-container is-rounded">
                     <p>{props.description}</p>
                 </div>
+                <Form {...props} />
             </div>
         </div>
     );
