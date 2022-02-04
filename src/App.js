@@ -39,6 +39,7 @@ class App extends React.Component {
     this.setState({
       city: response.name,
       temp: this.farenheit(response.main.temp),
+      main: response.weather[0].main,
       description: response.weather[0].description,
       icon: response.weather[0].icon
     });
@@ -49,6 +50,7 @@ class App extends React.Component {
     <Weather 
       city={this.state.city}
       temp={this.state.temp}
+      main={this.state.main}
       description={this.state.description}
       icon={this.state.icon} 
       getWeather={this.getWeather}

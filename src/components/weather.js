@@ -24,7 +24,8 @@ const Weather = props => {
                     </div>
                 </div>
                 <div className="nes-container is-rounded">
-                    <p>{props.description}</p>
+                    <p>Main: {props.main}</p>
+                    <p>Description: {props.description}</p>
                     <img src ={`http://openweathermap.org/img/w/${props.icon}.png`} alt="" />
                 </div>
                 <Form {...props} />
